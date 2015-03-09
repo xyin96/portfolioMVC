@@ -5,9 +5,12 @@ class App {
 
         require_once __DIR__ . '/../views/NavBar.php';
         require_once __DIR__ . '/../views/Footer.php';
+        require_once __DIR__ . '/../views/Background.php';
+        $bg = new Background();
 
         $args = $this->parseUrl();
         $selected = $args[0];
+        print '<div class="wrapper">';
         switch($selected){
             case "About":
                 require_once __DIR__ . '/../views/About.php';
@@ -42,7 +45,7 @@ class App {
         }
 
         $footer = new Footer();
-
+        print '</div>';
 
     }
 

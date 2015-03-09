@@ -1,10 +1,6 @@
 @import 'styles.css';
 
-.showcase{
-    width: 100%;
-    padding: 25px 10%;
-}
-.showcase div{
+.content div{
     display: inline-block;
     margin: 0;
 }

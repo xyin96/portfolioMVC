@@ -1,7 +1,12 @@
 @import 'styles.css';
 iframe {
-    height: calc(100% - 105px);
-    position: absolute;
+    min-height: calc(100vh - 105px);
     top: 55px;
     bottom: 50px;
+}
+@media(max-width: 767px){
+    iframe {
+        top: 50px;
+        min-height: calc(100vh - 105px);
+    }
 }

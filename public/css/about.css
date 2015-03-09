@@ -1,15 +1,18 @@
 @import 'styles.css';
 
-.content{
-    width: 80%;
-    margin: 25px 10%;
-    padding: 25px;
-    font-family: 'PT Sans', sans-serif;
-}
-
 .handles{
     list-style:none;
 }
 .handles > li{
     display:inline-block;
+}
+
+.collapse-mobile{
+    width:auto;
+}
+@media (max-width: 767px){
+    .collapse-mobile{
+        width:0;
+        visibility: hidden;
+    }
 }

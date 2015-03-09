@@ -1,5 +1,8 @@
 @import 'fonts.css';
 @import 'bootstrap.css';
+.wrapper {
+
+}
 .footer {
     width: 100%;
     height: 50px;
@@ -8,7 +11,33 @@
     bottom: 0;
     left: 0;
     position: absolute;
-    background: #fff;
+    position: fixed;
+    background: rgba(255,255,255,0.7);
+}
+
+.content{
+    width: 80%;
+    margin: 25px 10%;
+    padding: 25px;
+    font-family: 'PT Sans', sans-serif;
+    max-height:616px;
+    min-width: 330px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+@media(max-height:616px){
+    .content{
+        max-height:calc(100vh - 150px);
+    }
+}
+
+.background{
+    z-index:-999;
+    position: absolute;
+    position: fixed;
+    overflow:hidden;
+    width:100%;
+    height:100%
 }
 
 .navbar {
@@ -16,7 +45,8 @@
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: thin solid #aaa;
-    background-color:#fff;
+    background-color:rgba(255,255,255,0.7);
+    border-radius: 0;
 }
 .navbar-nav a{
     color:#666;
@@ -29,13 +59,31 @@
 }
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus {
-  color: #333;
-  background-color: transparent;
-  border-bottom: thick solid #AAA;
+    color: #333;
+    background-color: transparent;
+    border:none;
+    border-bottom: thick solid #AAA;
 }
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus {
   color: #555;
+    border:none;
   border-bottom: thick solid #000;
+}
+@media (max-width: 767px){
+    .navbar .navbar-nav > li > a:hover,
+    .navbar .navbar-nav > li > a:focus {
+        color: #333;
+        background-color: transparent;
+        border:none;
+        border-left: thick solid #AAA;
+    }
+    .navbar .navbar-nav > .active > a,
+    .navbar .navbar-nav > .active > a:hover,
+    .navbar .navbar-nav > .active > a:focus {
+        color: #555;
+        border:none;
+        border-left: thick solid #000;
+    }
 }
