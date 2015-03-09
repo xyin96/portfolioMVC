@@ -10,8 +10,8 @@ class NavBar {
     protected $navTabs = array(
         0 => "About",
         1 => "Projects",
-        2 => "Timeline",
-        3 => "Blog",
+        2 => "Blog",
+        3 => "Calendar",
         4 => "Contact"
     );
     public function __construct($index){
@@ -20,7 +20,7 @@ class NavBar {
         print '<nav class="navbar">';
         print '<div class="container-fluid">';
         print '<div class="navbar-header">';
-        print '<a class="navbar-brand" href="#">Xiaoyu Yin</a>';
+        print '<a class="navbar-brand" href="#">Xiaofish</a>';
         print '</div>';
         print '<ul class="nav navbar-nav">';
         foreach ($this->navTabs as $key => $value) {

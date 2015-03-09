@@ -1,4 +1,5 @@
 @import 'fonts.css';
+@import 'bootstrap.css';
 .footer {
     width: 100%;
     height: 50px;
@@ -7,6 +8,7 @@
     bottom: 0;
     left: 0;
     position: absolute;
+    background: #fff;
 }
 
 .navbar {
@@ -36,29 +38,4 @@
 .navbar .navbar-nav > .active > a:focus {
   color: #555;
   border-bottom: thick solid #000;
-}
-
-.showcase{
-    width: 100%;
-    padding: 25px 10%;
-}
-.showcase div{
-    display: inline-block;
-    margin: 0;
-}
-
-.gridlink {
-    width: 200px;
-    height: 200px;
-    position:relative;
-    background-color:#ddd;
-}
-.gridlink b{
-    background-color:rgba(0,0,0,0.5);
-    width:200px;
-    padding: 15px;
-    color: #fff;
-    bottom: 0;
-    left: 0;
-    position: absolute;
 }

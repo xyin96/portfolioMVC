@@ -13,17 +13,20 @@ class JSRequest {
         $selected = $args[0];
         switch($selected){
             case "About":
-                echo 'About Page';
+                require_once __DIR__ . '/../views/About.php';
+                $body = new About();
                 break;
             case "Projects":
                 require_once __DIR__ . '/../views/ProjectExplorer.php';
-                $exp = new ProjectExplorer();
-                break;
-            case "Timeline":
+                $body = new ProjectExplorer();
                 break;
             case "Blog":
+                require_once __DIR__ . '/../views/Blog.php';
+                $body = new Blog();
                 break;
             case "Contact":
+                require_once __DIR__ . '/../views/Contact.php';
+                $body = new Contact();
                 break;
         }
 

@@ -7,5 +7,7 @@
  */
 
 class Contact {
-
+    public function __construct(){
+        print '<link rel="stylesheet" href="public/css/contact.css" />';
+    }
 }

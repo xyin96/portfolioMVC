@@ -1,0 +1,7 @@
+@import 'styles.css';
+iframe {
+    height: calc(100% - 105px);
+    position: absolute;
+    top: 55px;
+    bottom: 50px;
+}

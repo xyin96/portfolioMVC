@@ -8,6 +8,7 @@
 
 class ProjectExplorer {
     public function __construct(){
+        print '<link rel="stylesheet" href="public/css/projects.css" />';
         print '<!--Main Content -->';
         print '<div class="container-fluid">';
         print '    <div class="showcase">';
