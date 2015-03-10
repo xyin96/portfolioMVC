@@ -32,6 +32,16 @@
     }
 }
 
+.collapse-mobile{
+    width:auto;
+}
+@media (max-width: 767px){
+    .collapse-mobile{
+        max-width:0;
+        visibility: hidden;
+    }
+}
+
 .background{
     z-index:-999;
     position: absolute;
