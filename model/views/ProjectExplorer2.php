@@ -6,7 +6,7 @@
  * Time: 9:40 PM
  */
 
-class ProjectExplorer {
+class ProjectExplorer2 {
     public function __construct(){
         $mysqli = new mysqli("localhost", "root", "blargHblargh1", "portfolio");
 

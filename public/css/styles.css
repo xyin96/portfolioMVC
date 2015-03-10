@@ -17,9 +17,8 @@
 
 .content{
     width: 100%;
-    padding: 25px 10%;
+    padding: 25px 10% 25px 10%;
     font-family: 'PT Sans', sans-serif;
-    max-height:616px;
     min-width: 330px;
     height: calc(100vh - 100px);
     overflow-y:auto;

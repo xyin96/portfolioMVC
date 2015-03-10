@@ -7,4 +7,22 @@
     display:inline-block;
 }
 
+table{
+    width: 100%;
+}
 
+table td{
+    padding:25px 5%;
+}
+
+.profile > img{
+    max-width:350px;
+    -ms-transform: rotate(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+    transform: rotate(15deg);
+    border:thick solid white;
+    -webkit-box-shadow: 10px 10px 5px 0px #777777;
+    -moz-box-shadow: 10px 10px 5px 0px #777777;
+    box-shadow: 10px 10px 5px 0px #777777;
+    float:right;
+}

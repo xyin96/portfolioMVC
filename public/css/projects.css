@@ -5,6 +5,15 @@
     margin: 0;
 }
 
+.handles{
+    list-style:none;
+}
+.handles > li{
+    display:inline-block;
+    margin: 5px;
+}
+
+
 .gridlink {
     width: 200px;
     height: 200px;
@@ -12,6 +21,7 @@
     background-color:#ddd;
     background-position: center center;
     border: dotted thin black;
+    display:inline-block;
 }
 .gridlink b{
     background-color:rgba(0,0,0,0.5);

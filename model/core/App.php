@@ -22,6 +22,11 @@ class App {
                 $nav = new NavBar(1);
                 $body = new ProjectExplorer();
                 break;
+            case "ProjectsDebug":
+                require_once __DIR__ . '/../views/ProjectExplorer2.php';
+                $nav = new NavBar(1);
+                $body = new ProjectExplorer2();
+                break;
             case "Blog":
                 require_once __DIR__ . '/../views/Blog.php';
                 $nav = new NavBar(2);
