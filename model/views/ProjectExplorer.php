@@ -16,7 +16,7 @@ class ProjectExplorer {
             exit();
         }
         print '<link rel="stylesheet" href="public/css/projects.css" />';
-        if($result = $mysqli->query("SELECT * FROM projects", MYSQLI_USE_RESULT)) {
+        if($result = $mysqli->query("SELECT * FROM projects ORDER BY id DESC", MYSQLI_USE_RESULT)) {
             print '<!--Main Content -->';
             print '<div class="content"><ul class="handles">';
             while ($value = $result->fetch_row()) {

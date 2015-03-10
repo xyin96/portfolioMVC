@@ -22,6 +22,9 @@
     background-position: center center;
     border: dotted thin black;
     display:inline-block;
+    -webkit-box-shadow: 3px 3px 1px 0px rgba(100,100,100,0.5);
+    -moz-box-shadow: 3px 3px 1px 0px rgba(100,100,100,0.5);
+    box-shadow: 3px 3px 1px 0px rgba(100,100,100,0.5);
 }
 .gridlink b{
     background-color:rgba(0,0,0,0.5);

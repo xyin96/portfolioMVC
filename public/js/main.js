@@ -11,7 +11,3 @@ angular.module('app', ['components'])
             tab = 'active';
         }
     });
-
-$(function(){
-
-})
