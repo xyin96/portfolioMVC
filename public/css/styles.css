@@ -16,14 +16,15 @@
 }
 
 .content{
-    width: 80%;
-    margin: 25px 10%;
-    padding: 25px;
+    width: 100%;
+    padding: 25px 10%;
     font-family: 'PT Sans', sans-serif;
     max-height:616px;
     min-width: 330px;
+    height: calc(100vh - 100px);
     overflow-y:auto;
     overflow-x:hidden;
+    background-color:rgba(255,255,255,0.15);
 }
 @media(max-height:616px){
     .content{
@@ -45,7 +46,7 @@
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: thin solid #aaa;
-    background-color:rgba(255,255,255,0.7);
+    background-color:rgba(255,255,255,0.9);
     border-radius: 0;
 }
 .navbar-nav a{

@@ -26,7 +26,6 @@ class NavBar {
         foreach ($this->navTabs as $key => $value) {
             $this->genNavTab($key, $index, $value);
         }
-        print '<li class=""><a href="?url={{navTab.name}}">{{navTab.name}}</a></li>';
         print '</ul>';
         print '</div></div>';
         print '</nav>';
