@@ -2,7 +2,6 @@
 class App {
 
     public function __construct(){
-
         require_once __DIR__ . '/../views/NavBar.php';
         require_once __DIR__ . '/../views/Footer.php';
         require_once __DIR__ . '/../views/Background.php';
@@ -41,6 +40,11 @@ class App {
                 require_once __DIR__ . '/../views/Contact.php';
                 $nav = new NavBar(4);
                 $body = new Contact();
+                break;
+            case "404":
+                require_once __DIR__ . '/../views/NotFound.php';
+                $nav = new NavBar(-1);
+                $body = new NotFound();
                 break;
             default:
                 require_once __DIR__ . '/../views/About.php';

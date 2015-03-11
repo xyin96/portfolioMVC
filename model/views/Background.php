@@ -32,16 +32,21 @@ class Background {
     }
 
     protected function getBG($data){
+        return $hex = 0xc9dbe9;
+
+    }
+
+    protected function getBG_reactive($data){
         switch($data){
             case "Clouds":
                 return $hex = 0xAAAAAA;
                 break;
             case "Clear":
                 return $hex = 0xc9dbe9;
-            break;
+                break;
             default:
                 return $hex = 0xc9dbe9;
-            break;
+                break;
         }
     }
 }

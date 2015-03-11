@@ -1,1 +1,9 @@
 @import url('http://fonts.googleapis.com/css?family=PT+Sans');
+
+.title{
+    font-size:4em;
+}
+
+body, p, section, li{
+    font-size:1em;
+}
