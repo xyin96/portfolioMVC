@@ -14,6 +14,17 @@ $(function(){
     // IE 6/7/8
     else $(".content").attachEvent("onmousewheel", MouseWheelHandler);
 
+    $(".readmoresymbol").click(function(){
+        if(!scrolling){
+            currPage = Math.min($(".content").length, currPage + 1);
+            scrolling = true;
+            $(".content").animate({
+                scrollTop:$(".content").height() * currPage, easing: "easeout"
+            }, 500, 0, function(){scrolling = false});
+            checksections();
+        }
+    })
+
     function MouseWheelHandler(e) {
 
         // cross-browser wheel delta
@@ -25,10 +36,13 @@ $(function(){
             scrolling = true;
             $(".content").animate({
                 scrollTop:$(".content").height() * currPage, easing: "easeout"
-            }, 750, 0, function(){scrolling = false});
+            }, 500, 0, function(){scrolling = false});
+            checksections();
         }
+    }
 
-        if(!skills){
+    function checksections(){
+        if(!skills && currPage == 1){
             $(".bargraph li ul li").each(function(index, element){
                 switch(index % 2){
                     case 0:
@@ -55,6 +69,9 @@ $(function(){
                         opacity: 0.75
                     }, 100);
                 });
+                $(this).click(function(){
+                    document.location='?url=Projects/'+this.textContent;
+                })
                 skills = true;
             });
         }

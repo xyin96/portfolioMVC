@@ -4,6 +4,14 @@
     display: inline-block;
     margin: 0;
 }
+.content{
+    max-height:calc(100vh - 200px);
+    background-color:transparent;
+}
+
+.wrapper{
+    background-color:rgba(255,255,255,0.15);
+}
 
 .handles{
     list-style:none;
@@ -13,6 +21,45 @@
     margin: 5px;
 }
 
+label{
+    width:100vw;
+    padding: 25px 15vw;
+    position:relative;
+    margin-bottom: 0;
+}
+.searchbar{
+    width:55vw;
+    min-height:40px;
+    padding:5px;
+    border: thin grey solid;
+    position:absolute;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.submitbtn{
+    width:100px;
+    min-height:40px;
+    padding:5px;
+    border: thin grey solid;
+    font-family: 'Glyphicons Halflings';
+    background:rgba(88,144,255,0.5);
+    color:white;
+    position:absolute;
+    left:calc(70vw - 1px);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index:1;
+}
+.submitbtn:before{
+    content:"\e003";
+}
+.submitbtn:hover, .submitbtn:focus{
+    background:rgba(88,144,255,1);
+}
+.submitbtn:active{
+    background:rgba(73,53,255,1);
+}
 
 .gridlink {
     width: 200px;
@@ -25,22 +72,58 @@
     -webkit-box-shadow: 3px 3px 1px 0px rgba(100,100,100,0.5);
     -moz-box-shadow: 3px 3px 1px 0px rgba(100,100,100,0.5);
     box-shadow: 3px 3px 1px 0px rgba(100,100,100,0.5);
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .gridlink b{
     background-color:rgba(0,0,0,0.5);
     width:200px;
     padding: 15px;
     color: #fff;
+    position: absolute;
+    -webkit-animation: hidedesc 0.5s cubic-bezier(.16,.84,.44,1) 1 forwards;
+    -moz-animation: hidedesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
+    -o-animation: hidedesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
+    top: 150px;
     bottom: 0;
     left: 0;
-    position: absolute;
 }
 .gridlink:hover b{
     background-color:rgba(0,0,0,0.8);
-    width:200px;
     padding: 15px;
     color: #fff;
     bottom: 0;
     left: 0;
     position: absolute;
+    width:200px;
+    -webkit-animation: showdesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
+    -moz-animation: showdesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
+    -o-animation: showdesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
+}
+
+
+@-webkit-keyframes showdesc {
+    0% {top:150px;}
+    100% {top: 0px;}
+}
+@-moz-keyframes showdesc {
+    0% {top:150px;}
+    100% {top: 0px;}
+}
+@-o-keyframes showdesc {
+    0% {top:150px;}
+    100% {top: 0px;}
+}
+
+@-webkit-keyframes hidedesc {
+    0% {top:0px;}
+    100% {top: 150px;}
+}
+@-moz-keyframes hidedesc {
+    0% {top:0px;}
+    100% {top: 150px;}
+}
+@-o-keyframes hidedesc {
+    0% {top:0px;}
+    100% {top: 150px;}
 }

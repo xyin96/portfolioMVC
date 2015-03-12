@@ -13,43 +13,47 @@ class App {
         switch($selected){
             case "About":
                 require_once __DIR__ . '/../views/About.php';
-                $nav = new NavBar(0);
-                $body = new About();
+                new NavBar(0);
+                new About();
                 break;
             case "Projects":
                 require_once __DIR__ . '/../views/ProjectExplorer.php';
-                $nav = new NavBar(1);
-                $body = new ProjectExplorer();
+                new NavBar(1);
+                if(isset($args[1])){
+                    new ProjectExplorer($args[1]);
+                } else {
+                    new ProjectExplorer('');
+                }
                 break;
             case "ProjectsDebug":
                 require_once __DIR__ . '/../views/ProjectExplorer2.php';
-                $nav = new NavBar(1);
-                $body = new ProjectExplorer2();
+                new NavBar(1);
+                new ProjectExplorer2();
                 break;
             case "Blog":
                 require_once __DIR__ . '/../views/Blog.php';
-                $nav = new NavBar(2);
-                $body = new Blog();
+                new NavBar(2);
+                new Blog();
                 break;
             case "Calendar":
                 require_once __DIR__ . '/../views/Calendar.php';
-                $nav = new NavBar(3);
-                $body = new Calendar();
+                new NavBar(3);
+                new Calendar();
                 break;
             case "Contact":
                 require_once __DIR__ . '/../views/Contact.php';
-                $nav = new NavBar(4);
-                $body = new Contact();
+                new NavBar(4);
+                new Contact();
                 break;
             case "404":
                 require_once __DIR__ . '/../views/NotFound.php';
-                $nav = new NavBar(-1);
-                $body = new NotFound();
+                new NavBar(-1);
+                new NotFound();
                 break;
             default:
                 require_once __DIR__ . '/../views/About.php';
-                $nav = new NavBar(0);
-                $body = new About();
+                new NavBar(0);
+                new About();
                 break;
         }
 

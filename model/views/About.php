@@ -17,7 +17,7 @@ class About {
         print '</section>';
         print '<section>';
         print '<h1>What can I Do?</h1>';
-        print '<ul class="bargraph"> <li> <h3>Programming Languages</h3> <ul> <li data-value="8">Java</li> <li data-value="6">PHP</li> <li data-value="6.5">Elm</li>  </ul> </li> <li> <h3>Web Development</h3> <ul> <li data-value="6">HTML/CSS</li> <li data-value="7">JavaScript</li> <li data-value="4">MySQL</li> </ul> </li> <li> <h3>Mobile Development</h3> <ul> <li data-value="8">Android</li> </ul> </li> <li> <h3>Misc</h3> <ul> <li data-value="6.5">MATLAB</li> <li data-value="8">Github</li> </ul> </li> </ul>';
+        print '<ul class="bargraph"> <li> <h3>Programming Languages</h3> <ul> <li data-value="8">Java</li> <li data-value="8">PHP</li> <li data-value="6.5">Elm</li>  </ul> </li> <li> <h3>Web Development</h3> <ul> <li data-value="8">HTML5,CSS3</li> <li data-value="8">JavaScript</li> <li data-value="4">MySQL</li> </ul> </li> <li> <h3>Mobile Development</h3> <ul> <li data-value="8">Android</li> </ul> </li> <li> <h3>Misc</h3> <ul> <li data-value="6.5">MATLAB</li> <li data-value="8">Github</li> </ul> </li> </ul>';
         print '<div class="tuzki collapse-mobile"><img src="assets/images/tuzki.png" /><!-- tuzki pic from picpngsticker.blogspot.com --></div>';
         print '</section>';
         print '<section>';
