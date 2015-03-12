@@ -37,9 +37,9 @@ class ProjectExplorer {
         if(!isset($params) || count($params) === 0){ return "1=1"; }
         $word = $this->clean($params[0]);
         if(count($params) > 1){
-            return "description LIKE '%{$word}%' OR keywords LIKE '%{$word}%' OR name LIKE '%{$word}%' OR " . $this->construct(array_slice($params, 1), $mysqli);
+            return "(description LIKE '%{$word}%' OR keywords LIKE '%{$word}%' OR name LIKE '%{$word}%') AND " . $this->construct(array_slice($params, 1), $mysqli);
         } else {
-            return "description LIKE '%{$word}%' OR keywords LIKE '%{$word}%' OR name LIKE '%{$word}%'";
+            return "(description LIKE '%{$word}%' OR keywords LIKE '%{$word}%' OR name LIKE '%{$word}%') ";
         }
 
     }
