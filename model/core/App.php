@@ -20,7 +20,7 @@ class App {
                 require_once __DIR__ . '/../views/ProjectExplorer.php';
                 new NavBar(1);
                 if(isset($args[1])){
-                    new ProjectExplorer($args[1]);
+                    new ProjectExplorer(array_slice($args, 1));
                 } else {
                     new ProjectExplorer('');
                 }
@@ -62,12 +62,19 @@ class App {
 
     }
 
-    public function parseUrl(){
+    protected function parseUrl(){
         if(isset($_GET['url'])){
-            return $url = explode('/', filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
+            return $url = $this->multiexplode(array('/',',',' '), filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
         } else {
             return $url = "About";
         }
+    }
+
+    protected function multiexplode ($delimiters,$string) {
+
+        $ready = str_replace($delimiters, $delimiters[0], $string);
+        $launch = explode($delimiters[0], $ready);
+        return  $launch;
     }
 
 }
