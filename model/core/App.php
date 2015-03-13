@@ -37,12 +37,12 @@ class App {
                 break;
             case "Calendar":
                 require_once __DIR__ . '/../views/Calendar.php';
-                new NavBar(3);
+                new NavBar(-1);
                 new Calendar();
                 break;
             case "Contact":
                 require_once __DIR__ . '/../views/Contact.php';
-                new NavBar(4);
+                new NavBar(3);
                 new Contact();
                 break;
             case "404":
@@ -64,7 +64,7 @@ class App {
 
     protected function parseUrl(){
         if(isset($_GET['url'])){
-            return $url = $this->multiexplode(array('/',',',' '), filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
+            return $url = $this->multiexplode(array('/','+',' ',':'), filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
         } else {
             return $url = "About";
         }

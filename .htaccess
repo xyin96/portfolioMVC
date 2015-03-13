@@ -1,0 +1,17 @@
+ErrorDocument 404 http://52.1.179.178/?url=404
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)/public/(.*)$ /public/$2 [L]
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)/assets/(.*)$ /assets/$2 [L]
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)/model/(.*)$ /assets/$2 [L]
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)/revamp/(.*)$ /assets/$2 [L]
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)/wordpress/(.*)$ /assets/$2 [L]
+RewriteRule  ^(Projects/.*)$ /index.php?url=$1 [L]
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)$  /index.php?url=$1  [L]
+RewriteRule  ^(About|Projects|Blog|Calendar|Contact)/$  /index.php?url=$1 [L]
+
+
+
+
+

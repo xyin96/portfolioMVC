@@ -3,6 +3,6 @@
  */
 $(function(){
     $(".querysearch").submit(function(event){
-        document.location='?url=Projects/' + $(".searchbar").val();
+        document.location='/Projects:' + $(".searchbar").val().replace(/\//g,',');
     });
 })

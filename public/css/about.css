@@ -1,4 +1,7 @@
 @import 'styles.css';
+a{
+    color:#FF0000;
+}
 
 .bargraph{
     list-style:none;

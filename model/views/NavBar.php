@@ -11,8 +11,7 @@ class NavBar {
         0 => "About",
         1 => "Projects",
         2 => "Blog",
-        3 => "Calendar",
-        4 => "Contact"
+        3 => "Contact",
     );
     public function __construct($index){
 
@@ -33,9 +32,9 @@ class NavBar {
 
     protected function genNavTab($index, $selIndex, $value){
         if($index == $selIndex){
-            print '<li class="active"><a href="?url=' . $value . '">' . $value . '</a></li>';
+            print '<li class="active"><a href="/' . $value . '">' . $value . '</a></li>';
         } else {
-            print '<li class=""><a href="?url=' . $value . '">' . $value . '</a></li>';
+            print '<li class=""><a href="/' . $value . '">' . $value . '</a></li>';
         }
     }
 }

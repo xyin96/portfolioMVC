@@ -71,7 +71,7 @@ body {
 }
 
 .x3 {
-    left: 30vw; top: -200px;
+    left: 30vw; top: 100px;
 
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
@@ -84,7 +84,7 @@ body {
 }
 
 .x4 {
-    left: -15vw; top: -250px;
+    left: -15vw; top: 250px;
 
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
@@ -97,7 +97,7 @@ body {
 }
 
 .x5 {
-    left: 60vw; top: -150px;
+    left: 60vw; top: 150px;
 
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
@@ -110,7 +110,7 @@ body {
 }
 
 .x6 {
-    left: -25vw; top: -100px;
+    left: -25vw; top: 100px;
 
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);

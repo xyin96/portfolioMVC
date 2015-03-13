@@ -70,7 +70,7 @@ $(function(){
                     }, 100);
                 });
                 $(this).click(function(){
-                    document.location='?url=Projects/'+this.textContent;
+                    document.location='/Projects:'+this.textContent;
                 })
                 skills = true;
             });
