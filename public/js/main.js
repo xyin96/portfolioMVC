@@ -1,13 +1,29 @@
-angular.module('app', ['components'])
+var nav = ["About","Projects","Blog","Contact"];
+var jsLoad = function(id,url){
+    var url;
 
-.controller('navbar', function($scope){
+    select(id);
+    if(!url) {
+        url = nav[id];
+    }
+    $.ajax({
+        url: "/jsr.php?url=" + url,
+        context: $(".content")[0]
+    }).done(function(data){
+        $(this).replaceWith(data);
+        window.history.pushState({"html":data, id:id},"", "/" + url);
+    })
+};
 
-        $scope.tabs = [{name: 'About', state: ''},{name: 'Projects', state: 'active'},{name: 'Blog', state: ''},{name: 'Contact', state:''}];
-        $scope.select = function(index){
-            var tab = tabs[index];
-            angular.forEach(tabs, function(tab) {
-                tab.state = '';
-            });
-            tab = 'active';
-        }
-    });
+var select = function(id){
+    $("ul.navbar-nav > li").each(function(){$(this).attr("class","");});
+    $("ul.navbar-nav > li:nth-child(" + (id + 1) + ")").attr("class","active");
+}
+
+window.onpopstate = function(e){
+    if(e.state){
+        console.log(e.state);
+        $(".content").replaceWith(e.state.html);
+        select(e.state.id)
+    }
+};

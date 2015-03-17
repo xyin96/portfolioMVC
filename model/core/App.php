@@ -64,7 +64,7 @@ class App {
 
     protected function parseUrl(){
         if(isset($_GET['url'])){
-            return $url = $this->multiexplode(array('/','+',' ',':'), filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
+            return $url = $this->multiexplode(array('/','+',',',' ',':'), filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
         } else {
             return $url = "About";
         }

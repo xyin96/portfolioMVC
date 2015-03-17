@@ -14,28 +14,57 @@ class JSRequest {
         switch($selected){
             case "About":
                 require_once __DIR__ . '/../views/About.php';
-                $body = new About();
+                new About();
                 break;
             case "Projects":
                 require_once __DIR__ . '/../views/ProjectExplorer.php';
-                $body = new ProjectExplorer();
+                if(isset($args[1])){
+                    new ProjectExplorer(array_slice($args, 1));
+                } else {
+                    new ProjectExplorer('');
+                }
+                break;
+            case "ProjectsDebug":
+                require_once __DIR__ . '/../views/ProjectExplorer2.php';
+                new ProjectExplorer2();
                 break;
             case "Blog":
                 require_once __DIR__ . '/../views/Blog.php';
-                $body = new Blog();
+                new Blog();
+                break;
+            case "Calendar":
+                require_once __DIR__ . '/../views/Calendar.php';
+                new Calendar();
                 break;
             case "Contact":
                 require_once __DIR__ . '/../views/Contact.php';
-                $body = new Contact();
+                new Contact();
+                break;
+            case "404":
+                require_once __DIR__ . '/../views/NotFound.php';
+                new NotFound();
+                break;
+            default:
+                require_once __DIR__ . '/../views/About.php';
+                new About();
                 break;
         }
 
 
     }
 
-    public function parseUrl(){
+    protected function parseUrl(){
         if(isset($_GET['url'])){
-            return $url = explode('/', filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
+            return $url = $this->multiexplode(array('/','+',',',' ',':'), filter_var(rtrim($_GET['url'],'/'), FILTER_SANITIZE_URL));
+        } else {
+            return $url = "About";
         }
+    }
+
+    protected function multiexplode ($delimiters,$string) {
+
+        $ready = str_replace($delimiters, $delimiters[0], $string);
+        $launch = explode($delimiters[0], $ready);
+        return  $launch;
     }
 }

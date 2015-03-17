@@ -4,10 +4,6 @@
     display: inline-block;
     margin: 0;
 }
-.content{
-    max-height:calc(100vh - 200px);
-    background-color:transparent;
-}
 
 .wrapper{
     background-color:rgba(255,255,255,0.15);
@@ -15,6 +11,7 @@
 
 .handles{
     list-style:none;
+    margin-top:50px;
 }
 .handles > li{
     display:inline-block;
@@ -23,9 +20,13 @@
 
 label{
     width:100vw;
-    padding: 25px 15vw;
+    padding: 0;
     position:relative;
-    margin-bottom: 0;
+    margin-bottom: 75px;
+}
+.querysearch{
+    position:fixed;
+    z-index:5;
 }
 .searchbar{
     width:55vw;
@@ -46,7 +47,7 @@ label{
     background:rgba(88,144,255,0.5);
     color:white;
     position:absolute;
-    left:calc(70vw - 1px);
+    left:calc(55vw - 1px);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     z-index:1;
@@ -101,7 +102,6 @@ label{
     -moz-animation: showdesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
     -o-animation: showdesc 0.15s cubic-bezier(.16,.84,.44,1) 1 forwards;
 }
-
 
 @-webkit-keyframes showdesc {
     0% {top:150px;}

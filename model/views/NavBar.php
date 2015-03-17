@@ -32,9 +32,9 @@ class NavBar {
 
     protected function genNavTab($index, $selIndex, $value){
         if($index == $selIndex){
-            print '<li class="active"><a href="/' . $value . '">' . $value . '</a></li>';
+            print '<li class="active"><a onclick="jsLoad('.$index.')">' . $value . '</a></li>';
         } else {
-            print '<li class=""><a href="/' . $value . '">' . $value . '</a></li>';
+            print '<li class=""><a onclick="jsLoad('.$index.')">' . $value . '</a></li>';
         }
     }
 }

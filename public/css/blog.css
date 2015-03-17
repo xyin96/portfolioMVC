@@ -1,4 +1,8 @@
 @import 'styles.css';
+.content{
+    padding:0;
+    margin: 0;
+}
 iframe {
     min-height: calc(100vh - 105px);
     top: 55px;

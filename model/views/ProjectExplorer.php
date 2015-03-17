@@ -14,10 +14,10 @@ class ProjectExplorer {
             printf("Connect failed: %s\n", $mysqli->connect_error);
             exit();
         }
+        print '<div class="content">';
         print '<link rel="stylesheet" href="public/css/projects.css" />';
         print '<!--Main Content -->';
         print '<form class="querysearch"><label><input id="query" class="searchbar" type="text" value="'. implode(", ", $params) .'" name="query" placeholder="Search: (ex. Java, PHP, ...)" /> <button type="submit" class="submitbtn"></button> </label> </form>';
-        print '<div class="content">';
         print '<section>';
         $query = $this->construct($params, $mysqli);
         if($result = $mysqli->query("SELECT * FROM projects WHERE {$query} ORDER BY date DESC", MYSQLI_USE_RESULT)) {
@@ -28,8 +28,10 @@ class ProjectExplorer {
             print '</ul>';
         }
         print '</section>';
-        print '</div><div class="tuzki collapse-mobile"><img src="assets/images/tuzkiwater.png" /><!-- tuzki pic from https://s-media-cache-ak0.pinimg.com/originals/8f/52/66/8f52660522affe35eabea3c8e811b428.jpg --></div>';
+        print '<div class="tuzki collapse-mobile"><img src="assets/images/tuzkiwater.png" /><!-- tuzki pic from https://s-media-cache-ak0.pinimg.com/originals/8f/52/66/8f52660522affe35eabea3c8e811b428.jpg --></div>';
         print '<script src="public/js/projects.js"></script>';
+        print '</div>';
+
         $mysqli->close();
     }
 

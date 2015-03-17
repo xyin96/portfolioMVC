@@ -78,6 +78,8 @@ section{
 }
 .navbar-nav a{
     color:#666;
+    cursor:pointer;
+
 }
 .navbar-brand{
     font-family: 'PT Sans', sans-serif;
